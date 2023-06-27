@@ -1,4 +1,4 @@
-import { Text, View, SafeAreaView, TextInput, Button, StyleSheet } from "react-native"
+import { Text, View, SafeAreaView, TextInput, Button, StyleSheet, ScrollView } from "react-native"
 import Constants from "expo-constants"
 import Header from "./app/Header"
 import { StatusBar } from "expo-status-bar"
@@ -8,13 +8,17 @@ import PostPreview from "./app/PostPreview"
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <StatusBar visible />
       <Header />
       <StoryList />
       <ProfileInfo />
       <PostPreview />
-    </SafeAreaView>
+      <PostPreview />
+      <PostPreview />
+      <PostPreview />
+      <PostPreview />
+    </ScrollView>
   )
 }
 
