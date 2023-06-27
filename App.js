@@ -1,29 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
-import logo from './assets/favicon.png'
-export default function App() {
+import { Text, View, SafeAreaView, TextInput, Button, StyleSheet } from "react-native"
+import Constants from "expo-constants"
+import Header from "./app/Header"
+import { StatusBar } from "expo-status-bar"
+import StoryList from "./app/StoryList"
+import ProfileInfo from "./app/ProfileInfo"
+import PostPreview from "./app/PostPreview"
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Image source={logo} resizeMode='contain' style={styles.logo} />
-      <Button title='+' onPress={() => {
-       return alert("we just made our first app")
-      }} />
-    </View>
-  );
+    <SafeAreaView style={styles.container}>
+      <StatusBar visible />
+      <Header />
+      <StoryList />
+      <ProfileInfo />
+      <PostPreview />
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-
-  logo: {
-    width: 150,
-    height: 50,
-    padding: 5,
-    
+    paddingHorizontal: 5,
+    paddingTop: Constants.statusBarHeight,
   }
-});
+})
+export default App
