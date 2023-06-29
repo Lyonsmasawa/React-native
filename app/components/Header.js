@@ -7,7 +7,7 @@ const Header = () => {
     <View>
       <View style={styles.container}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Image style={styles.logo} source={require("../assets/afvs.png")} />
+            <Image style={styles.logo} source={require("../../assets/afvs.png")} />
             <Text style={{width: '50%'}}>Divergram</Text>
         </View>
         <AntDesign name="message1" size={26} color="black"/> 
