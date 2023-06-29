@@ -14,10 +14,6 @@ const App = () => {
       <StoryList />
       <ProfileInfo />
       <PostPreview />
-      <PostPreview />
-      <PostPreview />
-      <PostPreview />
-      <PostPreview />
     </ScrollView>
   )
 }
